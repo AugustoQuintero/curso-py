@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Document Object Model</title>
+</head>
+<body>
+<p>Hola</p>
+<p>¿Cómo estás?</p>
+<p>¡Bienvenido!</p>
+
+<script>
+  let parrafos = document.getElementsByTagName("p");
+  console.log(parrafos); // Muestra todos los <p>
+  console.log(parrafos[0].textContent); // Muestra: Hola
+</script>
+
+</body>
+</html>
