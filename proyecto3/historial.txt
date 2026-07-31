@@ -1,0 +1,24 @@
+dir
+ambiente4\Scripts\activate
+pip list
+'c:\users\usuario autorizado\documents\documentos\mintic\2025\clases\proyecto3\ambiente4\scripts\python.exe -m pip install --upgrade pip'
+python -m pip install --upgrade pip
+pip freeze
+cls
+code -r .
+dir
+cd proy2
+dir
+cd..
+dir
+python prueba.py
+cls
+python
+cls
+dir
+doskey
+doskey\history
+!17
+cls
+doskey/history
+doskey/history > historial.txt
