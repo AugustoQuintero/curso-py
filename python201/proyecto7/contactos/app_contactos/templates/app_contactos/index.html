@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ingresar Nuevo contacto</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ formul.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <ul>
+        {% for cont in conts %}
+            <li>{{cont.nombre}} -- {{cont.telefono}}</li>
+        {%empty%}
+            <li>No hay contactos.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

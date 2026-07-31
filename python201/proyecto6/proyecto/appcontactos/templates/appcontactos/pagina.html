@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos app</title>
+</head>
+<body>
+    <h1>Agregar nuevo contacto</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Guardar</button>
+    </form>
+    <hr>
+    <h2>Contactos guardados</h2>
+    <ul>
+        {% for contacto in contactos %}
+            <li>{{contacto.nombre}} - {{contacto.telefono}} - {{contacto.detalle}} </li>
+        {% empty %}
+            <li>No hay contactos que mostrar</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
