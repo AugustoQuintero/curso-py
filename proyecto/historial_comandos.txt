@@ -1,0 +1,19 @@
+REM "DIR muestra los archivos y carpetas de la ruta actual:"
+dir
+REM "Vamos a crear una carpeta llamada proyecto:"
+mkdir proyecto
+python -m venv .venv
+REM "el comando anterior crea un nuevo entorno virtual:"
+REM "A continuacion vamos a cambiar de carpeta o directorio:"
+cd proyecto
+REM " usamos el comando ..\.venv\Scripts\activate donde .. lleva a la carpeta anterior con el fin de activar nuestro entorno con el nombre .venv:"
+..\.venv\Scripts\activate
+REM "Ya estando dentro del entorno podemos instalar las dependencias: "
+pip install "fastapi[standard]"
+REM "Vamos a abrir Visual Studio Code:"
+code -r .
+REM "Vamos a crear el archivo de dependencias llamado requirements.txt"
+pip freeze > requirements.txt
+doskey /history > historial_comandos.txt
+REM "Para instalar todas las dependencias: "
+pip install -r requirements.txt
