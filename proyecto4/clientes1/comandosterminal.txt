@@ -1,0 +1,49 @@
+dir
+ambiente4\Scripts\activate
+pip list
+'c:\users\usuario autorizado\documents\documentos\mintic\2025\clases\proyecto3\ambiente4\scripts\python.exe -m pip install --upgrade pip'
+python -m pip install --upgrade pip
+pip freeze
+cls
+code -r .
+dir
+cd proy2
+dir
+cd..
+dir
+python prueba.py
+cls
+python
+cls
+dir
+doskey
+doskey\history
+!17
+cls
+doskey/history
+doskey/history > historial.txt
+dir
+type historial.txt
+cls
+deactivate
+cd..
+dir
+mkdir proyecto4
+cd proyecto4
+cls
+REM "Empezamos creando el entorno virtual:"
+python -m venv ambiente1p4
+REM "Creamos la carpeta donde vamos a realizar el proyecto: "
+mkdir clientes1
+REM "Activamos el entorno virtual: "
+ambiente1p4\Scripts\activate
+REM "Ingresamosa la carpeta dnde se encuentra el proyecto: "
+cd clientes1
+REM "Vamos a instalar las dependencias a necesitar en este proyecto. Por ahora FastAPI."
+pip install "fastapi[standard]"
+REM "Actualizar PIP:"
+python -m pip install --upgrade pip
+REM "abrir VSC para crear y editar el proyecto. Con el comando: code -r ."
+code -r .
+REM "Despues de haber escrito el c¢digo main.py para la API, levantamos el servidor con: fastapi dev. La siguiente instrucci¢n es para guardar el historial que tenemos hasta el momento (doskey/history > comandosterminal.txt)"
+doskey /history > comandosterminal.txt

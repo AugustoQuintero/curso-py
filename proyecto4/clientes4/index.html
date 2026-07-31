@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar ruta mas corta</title>
+</head>
+<body>
+    <h1>Ruta más corta</h1>
+
+    <label for="lat">Latitud:</label>
+    <input type="number" id="lat" step="any">
+    <br>
+    <label for="lon">Latitud:</label>
+    <input type="number" id="lon" step="any">
+
+    <button onclick="buscarruta()">Buscar</button>
+
+    <h2>Resultado</h2>
+    <pre id="resultado">Buscando ruta...</pre>
+    <script>
+        async function buscarruta() {
+            const lat = document.getElementById('lat').value;
+            const lon = document.getElementById('lon').value;
+            const url = `http://127.0.0.1:8000/ricaurte/rutas/cercana?lat=${lat}&lon=${lon}`;
+            const respuesta = await fetch(url);
+            const dato = await respuesta.json();
+            document.getElementById('resultado').textContent = JSON.stringify(dato, null, 2);
+        }
+    </script>
+</body>
+</html>
